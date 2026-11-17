@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: crown-master-deploy-engine
+    env: static
+    buildCommand: echo "Building CSME Static App"
+    staticPublishPath: ./
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
